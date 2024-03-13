@@ -2,33 +2,31 @@
 
 // import org.junit.jupiter.api.Test;
 import java.util.Scanner;
-public class Main {
-  public static void main(String[] args) {
-    System.out.println("Podaj liczbę a:");
-    Scanner scanner = new Scanner(System.in);
-    int a = scanner.nextInt();
-    System.out.println("Podaj liczbę b:");
-    int b = scanner.nextInt();
-    System.out.println("Podaj liczbę c:");
-    int c = scanner.nextInt();
-
-    if(a > b && a > c)
-    {
-      System.out.println("Największa liczba to a: " + a);
-    }
-    else if(b>a && b>c)
-    {
-      System.out.println("Największa liczba to b: " + b);
-    }
-    else if(c>a && c>b)
-    {
-      System.out.println("Największa liczba to c: " + c);
-      
-    }
+import java.util.Random;
+public class Main 
+{
+  public static int generateRandomNumber(int min, int max)
+  {
+    Random random = new Random();
+    return random.nextInt(max - min + 1) + min;
   }
- 
+  public static void main(String[] args)
+  {
+    int randomNumber1 = generateRandomNumber(0,100);
+    int randomNumber2 = generateRandomNumber(0,100);
+    int randomNumber3 = generateRandomNumber(0,100);
+    int randomNumber4 = generateRandomNumber(0,100);
+    int randomNumber5 = generateRandomNumber(0,100);
+    
+    int suma = 0;
+
+    
+    suma = randomNumber1^2 + randomNumber2^ + randomNumber3^2 + randomNumber4^2+ randomNumber5^2;
+    System.out.println(suma);
+  }
+  
+}
   // @Test
   // void addition() {
   //     assertEquals(2, 1 + 1);
   // }
-}
