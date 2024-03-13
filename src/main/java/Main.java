@@ -10,7 +10,7 @@ public class Main {
     System.out.println(nazwa.charAt(i));
     }
   }
-
+ 
   // @Test
   // void addition() {
   //     assertEquals(2, 1 + 1);
